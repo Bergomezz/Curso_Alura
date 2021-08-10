@@ -1,8 +1,5 @@
 // escrever códigos para passar aos outros novos arquivos
 
-// const salvador = `Salvador`;
-// const saoPaulo = `São Paulo`;
-// const rioDeJaneiro = `Rio de Janeiro`;
 
 const listaDestinos = new Array(
     `Salvador`,
@@ -10,7 +7,17 @@ const listaDestinos = new Array(
     `Rio de Janeiro`
 );
 
-listaDestinos.push(`Curitiba`); //Adiciona um item na lista.
+const idadeComprador = 15;
 console.log('Destinos Possives');
-// console.log(salvador, saoPaulo, rioDeJaneiro)
+console.log(listaDestinos);
+
+if(idadeComprador >= 18){
+    console.log('Comprador maior de idade');
+    listaDestinos.splice(1,1);
+}else{
+    console.log('Comprador não é maior de idade!');
+};
+
+
+
 console.log(listaDestinos);
