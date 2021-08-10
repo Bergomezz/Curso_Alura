@@ -1,13 +1,16 @@
-console.log('conversão de Tipo');
 
+console.log('Trabalhando com Atribuição de Variáveis');
 
-console.log('ano' +2020);
-console.log('2' + '2');
-console.log(parseInt('2') + parseInt('2'));
+const idade = 36;
+const nome = 'Bernardo'
+let ano = 2021;
 
-console.log('10'/'2');
-console.log('Bernardo' / '2');
+console.log('Seu nome é:', nome);
+console.log('Sua idade é:', idade);
+console.log('O ano que você está é:', ano);
 
-console.log(6.5);
-console.log(6,5);
+console.log(`Seu nome é: ${nome}
+Sua idade é: ${idade}
+O ano que você está é: ${ano}
+`);
 
