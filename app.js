@@ -22,8 +22,7 @@ let rota1 = {
 };
 
 if(enderecoDeEntrega==enderecoDeEntrega1){
-    let bloco = (rota + rota1);
-    console.log(bloco);
+    console.log(rota, rota1);
 }else{
     console.log(rota);
     console.log(rota1);
