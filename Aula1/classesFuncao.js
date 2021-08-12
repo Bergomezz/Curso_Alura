@@ -59,3 +59,6 @@ class livroColecao extends livro {
         console.log(`O livro ${this.nome} faz parte da colção ${this.nomeColecao}`)
     }
 };
+
+const logicaDeProgramacao = new livroColecao('Lógica de Programação', 'Comece a Programar');
+logicaDeProgramacao.descreverColecao()
