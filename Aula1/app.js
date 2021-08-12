@@ -4,11 +4,12 @@ const readline = require('readline-sync');
 const numeroPedido = readline.question('Número do Pedido:');
 const enderecoDeEntrega = readline.question('Seu Endereço:');
 const horaDoPedido = readline.question('O Pedido foi Feito as:');
+const horaFormatada = horaDoPedido.replace(/(\d{2})?(\d{2})/, '$1:$2')
 
 let rota = {
     numeroPedido, 
     enderecoDeEntrega,
-    horaDoPedido
+    horaFormatada
 };
 
 const numeroPedido1 = readline.question('Número do Pedido:');
@@ -21,9 +22,23 @@ let rota1 = {
     horaDoPedido1
 };
 
+let rotaOrganizada = [];
+rotaOrganizada.push({
+    numeroPedido,
+    enderecoDeEntrega,
+    horaFormatada
+},{
+    numeroPedido1,
+    enderecoDeEntrega1,
+    horaDoPedido1
+});
+JSON.stringify(rotaOrganizada[0,1]);
+
 if(enderecoDeEntrega==enderecoDeEntrega1){
-    console.log(rota, rota1);
+    console.log(`Entrgador 1: ${rotaOrganizada}`);
 }else{
+    console.log('Entregador 1:');
     console.log(rota);
+    console.log('Entregador 2:');
     console.log(rota1);
 };
