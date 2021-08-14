@@ -1,1 +1,1 @@
-const nome = 'Bernardo';
+// Deixando para ser mudado
