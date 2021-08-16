@@ -1,43 +1,21 @@
-class Cliente{
-    nome;
-    cpf;
-};
+import { Cliente } from "./Cliente.js";
+import { ContaCorrente } from "./ContaCorrente.js";
 
-class ContaCorrente{
-    agencia;
-    _saldo;
+const cliente1 = new Cliente('Bernardo', 11122233309);
 
-    sacar(valor){
-        if(this._saldo >= valor){
-            this._saldo -= valor;
-            return(valor);
-        };
-    };
+const cliente2 = new Cliente('Alice', 88822233309);
 
-    depositar(valor){
-        if(valor > 0){
-            return;
-        };
-        this._saldo += valor;
-    };
-};
+const contaCorrenteBernardo = new ContaCorrente(cliente1, 1001);
+contaCorrenteBernardo.depositar(500);
 
-const cliente1 = new Cliente();
-cliente1.nome = 'Bernardo';
-cliente1.cpf = 11122233309;
 
-const cliente2 = new Cliente();
-cliente2.nome = 'Alice'
-cliente2.cpf = 88822233309;
+const conta2 = new ContaCorrente(cliente2, 102);
+contaCorrenteBernardo.transferir(200, conta2);
 
-const contaCorrenteBernardo = new ContaCorrente();
-contaCorrenteBernardo._saldo = 0;
-contaCorrenteBernardo.agencia = 1001;
 
-contaCorrenteBernardo.depositar(100);
-contaCorrenteBernardo.depositar(100);
-contaCorrenteBernardo.depositar(100);
 
-const valorSacado = contaCorrenteBernardo.sacar(50);
-
-console.log(contaCorrenteBernardo);
+//console.log(contaCorrenteBernardo);
+// console.log(JSON.stringify(cliente1));
+// console.log(JSON.stringify(cliente2));
+// console.log(`${JSON.stringify(cliente1)}, \n${JSON.stringify(cliente2)}`);
+console.log(ContaCorrente.numeroDeContas);

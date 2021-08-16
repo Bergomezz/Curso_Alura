@@ -15,7 +15,7 @@ const cliente1 = new Rota();
 const cliente2 = new Rota();
 
 if(cliente1.enderecoDeEntrega == cliente2.enderecoDeEntrega){
-    console.log(`Entregador 1: ${JSON.stringify(Rota)}`);
+    console.log(`Entregador 1: ${(Rota)}`);
 }else{
     console.log(`Entregador 1: ${cliente1} e Entregador 2: ${cliente2}`);
 };
