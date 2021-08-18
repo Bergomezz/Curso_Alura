@@ -1,15 +1,15 @@
-import { Cliente } from "./Cliente.js";
+import { Cliente } from "../Cliente.js";
 
 
 export class Conta {
     constructor(saldoInicial, cliente, agencia) {
+        if (this.constructor == Conta) {
+            throw new Error('Vocâ não deveria mudar esse objeto!');
+        };
+
         this._saldo = saldoInicial;
         this._cliente = cliente;
         this._agencia = agencia;
-
-        if(this.constructor == Conta){
-            console.log('Vocâ não deveria mudar esse objeto!');
-        };
     };
 
     set cliente(novoValor) {
@@ -27,7 +27,7 @@ export class Conta {
         return this._saldo;
     };
 
-    _sacar(valor, taxa){
+    _sacar(valor, taxa) {
         const valorSacado = taxa * valor;
         if (this._saldo >= valorSacado) {
             this._saldo -= valorSacado;
@@ -38,8 +38,7 @@ export class Conta {
     };
 
     sacar(valor) {
-        let taxa = 1;
-        return this._sacar(valor, taxa);
+        throw Error('Não é possível modificar, apenas metodo abstrato')
     };
 
     depositar(valor) {

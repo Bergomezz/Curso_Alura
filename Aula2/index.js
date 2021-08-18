@@ -1,27 +1,18 @@
 import { Cliente } from "./Cliente.js";
-import { Conta } from "./Conta.js";
-import { ContaCorrente } from "./ContaCorrente.js";
-import { ContaPoupanca } from "./ContaPoupanca.js";
+import { Gerente } from "./Funcionarios/Gerente.js";
+import { Diretor } from "./Funcionarios/Diretor.js";
+import { SistemaAutenticacao } from "./SistemaAutenticacao.js";
 
+const diretor = new Diretor('Camila', 10000, 12345678900);
+diretor.cadastrarSenha('123456')
+const gerente = new Gerente('Bernardo', 5000,98765432101);
+gerente.cadastrarSenha('123');
 
+let estaLogado = [];
 
+estaLogado.push = () => {
+    const diretorEstaLogado = SistemaAutenticacao.login(diretor, '123456');
+    const gerenteEstaLogado = SistemaAutenticacao.login(gerente, '123');
+};
 
-const cliente1 = new Cliente('Bernardo', 11122233309);
-// const cliente2 = new Cliente('Alice', 88822233309);
-
-
-const contaCorrenteBernardo = new ContaCorrente(cliente1, 1001);
-const contaPoupanca = new ContaPoupanca(50, cliente1, 1001);
-
-
-// console.log(conta);
-console.log(contaPoupanca);
-console.log(contaCorrenteBernardo);
-
-// const conta2 = new ContaCorrente(cliente2, 102);
-// contaCorrenteBernardo.transferir(200, conta2);
-
-// console.log(JSON.stringify(cliente1));
-// console.log(JSON.stringify(cliente2));
-// console.log(`${JSON.stringify(cliente1)}, \n${JSON.stringify(cliente2)}`);
-//console.log(ContaCorrente.numeroDeContas);
+console.log(estaLogado);
