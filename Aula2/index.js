@@ -1,6 +1,7 @@
 import { Cliente } from "./Cliente.js";
 import { Gerente } from "./Funcionarios/Gerente.js";
 import { Diretor } from "./Funcionarios/Diretor.js";
+import { Funcionario } from "./Funcionarios/FuncionarioCB.js";
 import { SistemaAutenticacao } from "./SistemaAutenticacao.js";
 
 const diretor = new Diretor('Camila', 10000, 12345678900);
@@ -13,9 +14,11 @@ const cliente = new Cliente('Lais', 99988877701, '456')
 
 // estaLogado.push = () => {
 // };
-const diretorLogado = SistemaAutenticacao.login(diretor, '123456');
-const gerenteLogado = SistemaAutenticacao.login(gerente, '123');
-const clienteLogado = SistemaAutenticacao.login(cliente, '456');
+const diretorEstaLogado = SistemaAutenticacao.login(diretor, '123456');
+const gerenteEstaLogado = SistemaAutenticacao.login(gerente, '123');
+console.log(gerenteEstaLogado, diretorEstaLogado)
+
+const clienteEstaLogado = SistemaAutenticacao.login(cliente, '456');
 
 // console.log(clienteEstaLogado);
-console.log(estaLogado);
+console.log(clienteEstaLogado);
