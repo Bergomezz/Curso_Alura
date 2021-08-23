@@ -6,13 +6,20 @@ const enderecoDeEntrega = readline.question('Seu Endereço:');
 const horaDoPedido = readline.question('O Pedido foi Feito as:');
 const horaFormatada = horaDoPedido.replace(/(\d{2})?(\d{2})/, '$1:$2')
 
-class Rota {
-    numeroPedido; 
-    enderecoDeEntrega;
-    horaFormatada;
+class Cliente {
+    constructor(nome, endereco, horaDoPedido, numeroPedido){
+        this.nome = nome;
+        this.endereco = enderecoDeEntrega;
+        this.horaDoPedido = horaDoPedido;
+        this.numeroPedido = numeroPedido;
+    };
+
 };
-const cliente1 = new Rota();
-const cliente2 = new Rota();
+
+class Rota extends Cliente{
+    constructor(nome, endereco);
+
+};
 
 if(cliente1.enderecoDeEntrega == cliente2.enderecoDeEntrega){
     console.log(`Entregador 1: ${(Rota)}`);
