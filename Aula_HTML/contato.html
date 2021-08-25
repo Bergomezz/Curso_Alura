@@ -23,7 +23,34 @@
         </div>
     </header>
     <main>
-        <p>caixa para escrita</p>
+        <form>
+            <label for="nomeSobrenome">Nome e Sobrenome:</label>
+            <input type="text" id="nomeSobrenome" class="input-padrao">
+
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" class="input-padrao">
+
+            <label for="telefoneDeContato">Telefone de Contato:</label>
+            <input type="text" id="telefoneDeContato" class="input-padrao">
+
+            <label for="mansagem">Mensagem:</label>
+            <textarea cols="71.5px" rows="10px" id="mensagem" class="input-padrao"></textarea>
+
+            <div>
+                <p>Como prefere o nosso contato:</p>
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">E-mail<label>
+                
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone<label>
+                
+                <label for="radio-whatsApp"><input type="radio" name="contato" value="whatsApp" id="radio-whatsApp">WhatsApp<label>
+                
+            </div>
+
+            <label class="checkbox"><input type="checkbox"> Gostaria de receber nossas novidades por e-mail?</label>
+
+            <input type="submit" value="Enviar Formulário">
+
+        </form>
     </main>
     <footer>
         <img src="logo-branco.png">
