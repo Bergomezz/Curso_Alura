@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background: #BBBBBB;
     padding: 20px 0;
@@ -162,7 +166,7 @@ td, th {
     width: 100%;
 }
 
-.titutlo-principal {
+.titulo-principal {
     text-align: center;
     font-size: 2em;
     margin: 0 0 1em;
@@ -192,3 +196,11 @@ td, th {
     width: 60%;
 }
 
+.mapa {
+    padding: 3em 0;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
