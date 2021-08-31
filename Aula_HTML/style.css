@@ -33,7 +33,7 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
     color: #C78C19;
     text-decoration: underline;
 }
@@ -54,15 +54,17 @@ nav a:hover{
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
-    
+
 }
 
 .produtos li:hover {
     border-color: #C78C19;
 }
+
 .produtos li:hover h2 {
     font-size: 34px;
 }
+
 .produtos li:active {
     border-color: #088C19;
 }
@@ -82,12 +84,13 @@ nav a:hover{
     margin-top: 10px;
 }
 
-footer{
+footer {
     text-align: center;
     background: url('bg.jpg');
     padding: 40px 0;
-    
+
 }
+
 .copyright {
     color: #FFFFFF;
     font-size: 13px;
@@ -96,16 +99,14 @@ footer{
 
 
 
-main{
-    width: 940px;
-    margin: 0 auto;
-}
+main {}
 
-form{
+form {
     margin: 40px 0;
 }
 
-form label, form legend {
+form label,
+form legend {
     display: block;
     font-size: 20px;
     margin: 0 0 20px;
@@ -123,7 +124,7 @@ form input {
     width: 50%;
 }
 
-.checkbox{
+.checkbox {
     margin: 20px 0;
 }
 
@@ -155,7 +156,8 @@ thead {
     font-weight: bold;
 }
 
-td, th {
+td,
+th {
     border: 1px solid #000000;
     padding: 8px 15px;
 }
@@ -172,6 +174,13 @@ td, th {
     margin: 0 0 1em;
     clear: left;
     font-weight: bold;
+}
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .principal p {
@@ -194,6 +203,12 @@ td, th {
 
 .mapa {
     padding: 3em 0;
+    background: linear-gradient(#FEFEFE 25%,#888888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
 }
 
 .mapa p {
@@ -203,6 +218,7 @@ td, th {
 
 .beneficios {
     padding: 3em 0;
+    background: #888888;
 }
 
 .conteudo-beneficios {
@@ -214,6 +230,16 @@ td, th {
     width: 40%;
     display: inline-block;
     vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens::before {content:"\2605";}
+
+.itens:first-child {
+    font-weight: bold;
 }
 
 .imagemBenificios {
