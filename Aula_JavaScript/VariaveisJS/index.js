@@ -1,20 +1,64 @@
+let forma = 'retangulo';
+let altura = 5;
+let comprimento = 7;
+if (forma === 'retangulo') {
+    let area = altura * comprimento;
+}else {
+    return console.error();
+};
+
+
+
+console.log(area);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Tipo number
-class Dados {
+// class Dados {
 
-}
+// }
 
-let dadosRolagem = [];
+// let dadosRolagem = [];
 
-dadosRolagem.push = () => {
-    const d4 = Math.round(Math.random() * 4) + 1;
-    const d6 = Math.floor(Math.random() * 6) + 1;
-    const d8 = Math.round(Math.random() * 8) + 1;
-    const d10 = Math.round(Math.random() * 10) + 1;
-    const d12 = Math.round(Math.random() * 12) + 1;
-    const d20 = Math.round(Math.random() * 20) + 1;
-}
+// dadosRolagem.push = () => {
+//     let d4 = (Math.round(Math.random() * 4) + 1);
+//     let d6 = Math.floor(Math.random() * 6) + 1;
+//     let d8 = Math.round(Math.random() * 8) + 1;
+//     let d10 = Math.round(Math.random() * 10) + 1;
+//     let d12 = Math.round(Math.random() * 12) + 1;
+//     let d20 = Math.round(Math.random() * 20) + 1;
+// }
 
-console.log(dados[0])
+
+// console.log(Dados)
 
 
 
