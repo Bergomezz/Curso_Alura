@@ -1,22 +1,32 @@
-// Tipo number
+//Tipo number
 // class Dados {
 
-// }
+// };
+
 
 // let dadosRolagem = [];
 
-// dadosRolagem.push = () => {
-//     let d4 = (Math.round(Math.random() * 4) + 1);
-//     let d6 = Math.floor(Math.random() * 6) + 1;
-//     let d8 = Math.round(Math.random() * 8) + 1;
-//     let d10 = Math.round(Math.random() * 10) + 1;
-//     let d12 = Math.round(Math.random() * 12) + 1;
-//     let d20 = Math.round(Math.random() * 20) + 1;
-// }
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
 
+let dadosRolagem = {
+    d4: getRandomInt(1,4),
+    d6: getRandomInt(1,6),
+    d8: getRandomInt(1,8),
+    d10: getRandomInt(1,10),
+    d12: getRandomInt(1,12),
+    d20: getRandomInt(1,20),
+}
 
-// console.log(Dados)
-
+console.log(dadosRolagem.d4)
+console.log(dadosRolagem.d6)
+console.log(dadosRolagem.d8)
+console.log(dadosRolagem.d10)
+console.log(dadosRolagem.d12)
+console.log(dadosRolagem.d20)
 
 
 
