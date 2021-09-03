@@ -27,9 +27,11 @@ let dadosRolagem = {
 // console.log(dadosRolagem.d10)
 // console.log(dadosRolagem.d12)
 // console.log(dadosRolagem.d20)
+let hp = 20;
+let armadura = 2;
 
+console.log(dadosRolagem.d6 >= 3 ? "ataque" : "errou")
 
-console.log(dadosRolagem.d4 >= 2 ? "ataque" : "falha critica")
 
 
 
