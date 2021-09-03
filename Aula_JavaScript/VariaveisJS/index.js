@@ -21,15 +21,15 @@ let dadosRolagem = {
     d20: getRandomInt(1,20),
 }
 
-console.log(dadosRolagem.d4)
-console.log(dadosRolagem.d6)
-console.log(dadosRolagem.d8)
-console.log(dadosRolagem.d10)
-console.log(dadosRolagem.d12)
-console.log(dadosRolagem.d20)
+// console.log(dadosRolagem.d4)
+// console.log(dadosRolagem.d6)
+// console.log(dadosRolagem.d8)
+// console.log(dadosRolagem.d10)
+// console.log(dadosRolagem.d12)
+// console.log(dadosRolagem.d20)
 
 
-
+console.log(dadosRolagem.d4 >= 2 ? "ataque" : "falha critica")
 
 
 
