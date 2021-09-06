@@ -27,23 +27,23 @@ let dadosRolagem = {
 // console.log(dadosRolagem.d10)
 // console.log(dadosRolagem.d12)
 // console.log(dadosRolagem.d20)
-class Vilao{
-    constructor(nome,nivel)
-    forca
-    resistencia
-    inteligencia
-    hp = (forca * resistencia)*nivel
-    armadura
-}
+// class Vilao{
+//     constructor(nome,nivel)
+//     forca:this.forca  + nivel
+//     resistencia:this.resistencia + nivel
+//     inteligencia:this.inteligencia + nivel
+//     hp = (forca * resistencia)*nivel
+//     armadura
+// }
 
-function dano(){
-    dadosRolagem.d6 >= 3 ? arma-hp : 0
+// function dano(){
+//     dadosRolagem.d6 >= 3 ? arma-hp : 0
 
-}
+// }
 
-do{
-    dano 
-}while (hp >= 0)
+// do{
+//     dano 
+// }while (hp >= 0)
 
 
 console.log(dadosRolagem.d6 >= 3 ? "ataque" : "errou")
