@@ -47,7 +47,9 @@ let dadosRolagem = {
 
 
 console.log(dadosRolagem.d6 >= 3 ? "ataque" : "errou")
-
+let danoDeRolagem = () => {
+    for (dadosRolagem.d6 >= 3; (dadosRolagem.d6 - 2)-20; 20<=0);
+}
 
 
 
