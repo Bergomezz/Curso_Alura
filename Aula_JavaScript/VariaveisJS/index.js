@@ -13,12 +13,12 @@ function getRandomInt(min, max) {
 }
 
 let dadosRolagem = {
-    d4: getRandomInt(1,4),
-    d6: getRandomInt(1,6),
-    d8: getRandomInt(1,8),
-    d10: getRandomInt(1,10),
-    d12: getRandomInt(1,12),
-    d20: getRandomInt(1,20),
+    d4: getRandomInt(1, 4),
+    d6: getRandomInt(1, 6),
+    d8: getRandomInt(1, 8),
+    d10: getRandomInt(1, 10),
+    d12: getRandomInt(1, 12),
+    d20: getRandomInt(1, 20),
 }
 
 // console.log(dadosRolagem.d4)
@@ -27,14 +27,18 @@ let dadosRolagem = {
 // console.log(dadosRolagem.d10)
 // console.log(dadosRolagem.d12)
 // console.log(dadosRolagem.d20)
-// class Vilao{
-//     constructor(nome,nivel)
-//     forca:this.forca  + nivel
-//     resistencia:this.resistencia + nivel
-//     inteligencia:this.inteligencia + nivel
-//     hp = (forca * resistencia)*nivel
-//     armadura
-// }
+class Vilao {
+    constructor(nome, nivel)
+    forca = this.forca + nivel;
+    resistencia = this.resistencia + nivel;
+    inteligencia = this.inteligencia + nivel;
+    hp = (forca * resistencia) * nivel
+    armadura = item
+}
+
+for (let i = Vilao.hp; i = 0; i - danoDeRolagem) {
+    return 'Morto!'
+};
 
 // function dano(){
 //     dadosRolagem.d6 >= 3 ? arma-hp : 0
@@ -48,7 +52,7 @@ let dadosRolagem = {
 
 console.log(dadosRolagem.d6 >= 3 ? "ataque" : "errou")
 let danoDeRolagem = () => {
-    for (dadosRolagem.d6 >= 3; (dadosRolagem.d6 - 2)-20; 20<=0);
+    for (dadosRolagem.d6 >= 3; (dadosRolagem.d6 - 2) - 20; 20 <= 0);
 }
 
 
