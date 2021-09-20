@@ -1,2 +1,2 @@
-import ListaDeNotas from "./listaDeNotas";
+import ListaDeNotas from "./ListaDeNotas";
 export default ListaDeNotas;
