@@ -1,0 +1,21 @@
+.lista-categorias {
+    background-color: #FFFF;
+}
+
+.lista-categorias_item {
+    display: inline-flex;
+    flex-direction: column;
+    padding: .50rem;
+    margin: .25em;
+    background: rgb(0, 0, 68);
+    color: cornsilk;
+    border-radius: 7.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75vh;
+}
+
+.lista-categorias_input {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+}
