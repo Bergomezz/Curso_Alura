@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function imcGenerico(peso, altura) {
+        let imc = Math.round(peso / (altura ^2));
+        if(imc < 18.5){
+            return (imc + " Você está abaixo do peso");
+        }if(imc > 24.9){
+            return (imc + " Você está acima do peso");
+        }else{
+            return (imc + " Você está dentro da faixa ideal de peso.")
+        }
+    }
+
+    mostra("Bernardo, seu IMC é de: " + imcGenerico(69,1.70));
+    mostra("Camila, seu IMC é de: " + imcGenerico(49,1.45))
+</script>
