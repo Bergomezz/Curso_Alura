@@ -10,19 +10,14 @@
         pulaLinha();
     }
 
-    function imcGenerico(peso1, altura1, peso2, altura2) {
-        let imc1 = Math.round(peso1 / (altura1 * altura1));
-        let imc2 = Math.round(peso2 / (altura2 * altura2));
-        if (((imc1 + imc2)/2) < 18.5) {
-            return (((imc1 + imc2)/2) + " Você está abaixo do peso");
-        }
-        if (((imc1 + imc2)/2) > 24.9) {
-            return (((imc1 + imc2)/2) + " Você está acima do peso");
-        } else {
-            return (((imc1 + imc2)/2) + " Você está dentro da faixa ideal de peso.")
-        }
-    }
+    function imcGenerico(peso, altura) {
+        return Math.round(peso / (altura * altura));
 
-    mostra("Bernardo e Camila, a média do IMC é de: " + imcGenerico(68, 1.70, 48, 1.50));
-    // mostra("Camila, seu IMC é de: " + imcGenerico(48, 1.50))
+    }
+    var alturaInformada = prompt("Informe sua altura.");
+    var pesoInformado = prompt("Informe seu peso.");
+
+    var imc = imcGenerico(pesoInformado, alturaInformada);
+
+    document.write("O IMC calculado é " + imc)
 </script>
