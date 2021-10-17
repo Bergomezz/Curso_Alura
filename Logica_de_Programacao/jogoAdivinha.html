@@ -10,18 +10,23 @@
         pulaLinha();
     }
 
-    function sorteia(n){
-        var n = Math.round(Math.random(0,10)*10)
+    function sorteia(n) {
+        var n = Math.round(Math.random(0, 10) * 10)
         return n
     }
 
     var numeroPensado = sorteia();
     console.log(numeroPensado)
-    var chute = parseInt(prompt("Digite um número entre 1 a 10"))
+    var tentativa = 1;
+    while (tentativa <= 3) {
+        var chute = parseInt(prompt("Digite um número entre 1 a 10"))
 
-    if (chute == numeroPensado) {
-        mostra("Você acertou!")
-    } else {
-        mostra("Você errou! O número pensado foi: " + numeroPensado)
+        if (chute == numeroPensado) {
+            mostra("Você acertou!")
+            break;
+        } else {
+            mostra("Você errou!")
+        }
+        tentativa++;
     }
 </script>
