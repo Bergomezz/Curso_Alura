@@ -19,5 +19,15 @@
 
     var imc = imcGenerico(pesoInformado, alturaInformada);
 
-    document.write("O IMC calculado é " + imc)
+    mostra("O IMC calculado é " + imc)
+
+    if (imc < 18.5) {
+        mostra("Seu IMC está abaixo do recomendado!")
+    }
+    if (imc > 24.9) {
+        mostra("Seu IMC está acima do recomentado")
+    }
+    if (imc >= 18.5 && imc <= 24.9) {
+        mostra("Seu IMC está dentro do recomendado pela OMS")
+    }
 </script>
