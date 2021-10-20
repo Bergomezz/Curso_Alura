@@ -3,7 +3,7 @@ import style from './Formulario.module.scss'
 import Botao from "../Botao";
 
 class Formulario extends React.Component <{
-    setTarefas: const setTarefas: React.Dispatch<React.SetStateAction<{
+    setTarefas: React.Dispatch<React.SetStateAction<{
         tarefa: string;
         tempo: string;
     }[]>>
