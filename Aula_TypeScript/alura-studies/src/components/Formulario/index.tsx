@@ -2,7 +2,12 @@ import React from "react";
 import style from './Formulario.module.scss'
 import Botao from "../Botao";
 
-class Formulario extends React.Component {
+class Formulario extends React.Component <{
+    setTarefas: const setTarefas: React.Dispatch<React.SetStateAction<{
+        tarefa: string;
+        tempo: string;
+    }[]>>
+}> {
     state = {
         tarefa: "",
         tempo: "00:00"
@@ -45,7 +50,7 @@ class Formulario extends React.Component {
                     required
                     />
                 </div>
-                <Botao>
+                <Botao type="submit">
                     Adicionar
                 </Botao>
             </form>
