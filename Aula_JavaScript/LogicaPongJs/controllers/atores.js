@@ -31,6 +31,29 @@ function racket() {
   rect(xRect, yRect, rectHeight, rectWidth)
 }
 
+function showRacket() {
+  racket()
+}
+
+function movingRacket() {
+  if (keyIsDown(UP_ARROW)) {
+    yRect -= 10
+  }
+  if (keyIsDown(DOWN_ARROW)) {
+    yRect += 10
+  }
+}
+
+function verifyColliderRacket() {
+  if (
+    xBall - arc < xRect + rectWidth &&
+    yBall - arc < yRect + rectHeight &&
+    yBall + arc > yRect
+  ) {
+    xBallSpeed *= -1
+  }
+}
+
 function setup() {
   createCanvas(600, 400)
 }
@@ -41,4 +64,7 @@ function draw() {
   ballMoviments()
 
   colliderEdge()
+  showRacket()
+  movingRacket()
+  verifyColliderRacket()
 }
