@@ -11,6 +11,8 @@ let yRect = 150
 let rectHeight = 90
 let rectWidth = 10
 
+let hit = false
+
 function ball() {
   circle(xBall, yBall, diameter)
 }
