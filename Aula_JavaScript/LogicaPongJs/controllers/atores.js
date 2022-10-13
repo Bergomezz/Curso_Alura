@@ -6,12 +6,20 @@ let arc = diameter / 2
 let xBallSpeed = 6
 let yBallSpeed = 6
 
+//Our racket variable
 let xRect = 5
 let yRect = 150
 let rectHeight = 90
 let rectWidth = 10
 
-let hit = false
+//Opposition racket variable
+let xRack = 585
+let yRack = 150
+let oppositionYSpeed = 2
+
+//scoreboard
+let myScore = 0
+let oppositionScore = 0
 
 function ball() {
   circle(xBall, yBall, diameter)
@@ -29,12 +37,15 @@ function colliderEdge() {
   }
 }
 
-function racket() {
-  rect(xRect, yRect, rectHeight, rectWidth)
+function racket(x, y) {
+  rect(x, y, rectHeight, rectWidth)
 }
 
+function showRacket(x, y) {
+  racket(x, y)
+}
 function showRacket() {
-  racket()
+  racket(xRack, yRack)
 }
 
 function movingRacket() {
@@ -46,13 +57,34 @@ function movingRacket() {
   }
 }
 
-function verifyColliderRacket() {
+function movingOppositionRacket() {
+  oppositionYSpeed = yBall - yRack - rectWidth / 2 - 30
+
+  yRack += oppositionYSpeed
+}
+
+function verifyColliderRacket(x, y) {
   if (
-    xBall - arc < xRect + rectWidth &&
-    yBall - arc < yRect + rectHeight &&
-    yBall + arc > yRect
+    xBall - arc < x + rectWidth &&
+    yBall - arc < y + rectHeight &&
+    yBall + arc > y
   ) {
     xBallSpeed *= -1
+  }
+}
+
+function includingScoreboard(scoreboard1, scoreboard2) {
+  fill(255)
+  text(scoreboard1, 278, 26)
+  text(scoreboard2, 278, 26)
+}
+
+function makingScore() {
+  if (xBall > 590) {
+    myScore += 1
+  }
+  if (xBall < 10) {
+    oppositionScore += 1
   }
 }
 
@@ -66,7 +98,12 @@ function draw() {
   ballMoviments()
 
   colliderEdge()
-  showRacket()
+  showRacket(xRect, yRect)
+  showRacket(xRack, yRack)
   movingRacket()
-  verifyColliderRacket()
+  movingOppositionRacket()
+  verifyColliderRacket(xRect, yRect)
+  verifyColliderRacket(xRack, yRack)
+  includingScoreboard(myScore, oppositionScore)
+  makingScore()
 }

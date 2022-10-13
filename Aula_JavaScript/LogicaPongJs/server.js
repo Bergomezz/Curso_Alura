@@ -1,13 +1,18 @@
-//import '/index'
 const express = require('express')
 const http = require('http')
-const app = express()
+//import * as PIXI from 'pixi.js'
 const port = 3000
 
-app.listen(port, () => {
-  console.log(`listening on port ${port}`)
-})
+const viewPortWidth = 1920
+const viewPortHeight = 1080
+// let app = new PIXI.Application({ width: viewPortWidth, height: viewPortHeight })
 
-app.get('/', (req, res) => {
-  res.send('<h1> Server on localhost:3000 with ExpressJS</h1>')
-})
+// document.body.appendChild(app.view)
+
+const requestListener = function (req, res) {
+  res.writeHead(200)
+  res.end('Hello, World!')
+}
+
+const server = http.createServer(requestListener)
+server.listen(port)
