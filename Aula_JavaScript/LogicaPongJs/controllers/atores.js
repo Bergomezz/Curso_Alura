@@ -74,9 +74,13 @@ function verifyColliderRacket(x, y) {
 }
 
 function includingScoreboard(scoreboard1, scoreboard2) {
+  textAlign(CENTER)
+  textSize(16)
+  fill(color(255, 140, 0))
   fill(255)
-  text(scoreboard1, 278, 26)
-  text(scoreboard2, 278, 26)
+  text(scoreboard1, 170, 26)
+  fill(255)
+  text(scoreboard2, 470, 26)
 }
 
 function makingScore() {
