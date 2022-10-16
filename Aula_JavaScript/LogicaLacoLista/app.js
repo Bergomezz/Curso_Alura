@@ -1,25 +1,21 @@
-import images from './controller/images'
-const SCREENWIDTH = 1270
-const SCREENHIEGHT = 720
+let screenWidth = 500
+let screenHeight = 400
 
-PIXI.loader
-  .add([
-    '/img/ator-1.png',
-    '/img/carro-1.png',
-    '/img/carro-2.png',
-    '/img/carro-3.png',
-    '/img/estrada.png'
-  ])
-  .load(images)
+let xCars = [600, 600, 600]
+let yCars = [40, 150, 260]
 
-PIXI.Assets.backgroundLoad('/img/estrada.png')
-await PIXI.Assets.loadBundle('/img/estrada.png')
+let xActor = 100
+let yActor = 366
 
-function configuring() {
-  let app = new PIXI.Application({ width: SCREENWIDTH, height: SCREENHIEGHT })
-  document.body.appendChild(app.view)
+function setup() {
+  createCanvas(screenWidth, screenHeight)
 }
-configuring()
 
-function draw() {}
-draw()
+function draw() {
+  background(imageStreet)
+  showActor()
+  showCars()
+  movingCars()
+  movingActor()
+  backCarToInitialPosition()
+}

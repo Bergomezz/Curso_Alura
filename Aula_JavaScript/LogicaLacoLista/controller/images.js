@@ -1,12 +1,21 @@
-let actor, car1, car2, car3, street
+let imageActor
+let imageStreet
 
-function images() {
-  actor = new PIXI.Sprite.from('/img/ator-1.png')
-  street = new PIXI.Sprite.from('/img/estrada.png')
-  car1 = new PIXI.Sprite.from('/img/carro-1.png')
-  car2 = new PIXI.Sprite.from('/img/carro-2.png')
-  car3 = new PIXI.Sprite.from('/img/carro-3.png')
+function preload() {
+  imageStreet = loadImage('/img/estrada.png')
+  imageActor = loadImage('/img/ator-1.png')
+  imageCar = loadImage('/img/carro-1.png')
+  imageCar2 = loadImage('/img/carro-2.png')
+  imageCar3 = loadImage('/img/carro-3.png')
+  imageCars = [imageCar, imageCar2, imageCar3]
 }
-images()
 
-export default images
+function showCars() {
+  for (let i = 0; i < imageCars.length; i = i++) {
+    image(imageCars[i], xCars[i], yCars[i], 50, 40)
+  }
+}
+
+function showActor() {
+  image(imageActor, xActor, yActor, 30, 30)
+}
