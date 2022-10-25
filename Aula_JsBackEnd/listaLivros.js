@@ -1,27 +1,59 @@
 const precosLivros = [
   {
-    titulo:"Javascript",
-    preco: 25
-  }, 
+    titulo: "JavaScript",
+    preco: 25,
+    editora: 'Folha'
+  },
   {
     titulo: "PHP",
-    preco: 15
+    preco: 15,
+    editora: 'Folha'
   }, 
   {
-    titulo:"Java",
-    preco: 30
+    titulo: "Java",
+    preco: 30,
+    editora: 'Folha'
   }, 
   {
     titulo: "Elixir",
-    preco: 50
+    preco: 50,
+    editora: 'Folha'
   }, 
   {
-    titulo:"GO",
-    preco: 45
+    titulo: "Go",
+    preco: 45,
+    editora: 'Folha'
   }, 
   {
     titulo: "Python",
-    preco: 20
-  }]
-  
-module.exports = precosLivros
+    preco: 20,
+    editora: 'Galho'
+  },
+  {
+    titulo: "Rust",
+    preco: 22,
+    editora: 'Galho'
+  },
+  {
+    titulo: "Ruby",
+    preco: 28,
+    editora: 'Galho'
+  },
+  {
+    titulo: "C#",
+    preco: 33,
+    editora: 'Galho'
+  },
+  {
+    titulo: "C++",
+    preco: 35,
+    editora: 'Galho'
+  },
+  {
+    titulo: "Scala",
+    preco: 40,
+    editora: 'Galho'
+  }
+];
+
+module.exports = precosLivros;
