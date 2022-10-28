@@ -25,6 +25,11 @@ const listaLivros = [
     editora: 'Folha',
   },
   {
+    titulo: 'Scala',
+    preco: 40,
+    editora: 'Galho',
+  },
+  {
     titulo: 'Python',
     preco: 20,
     editora: 'Galho',
@@ -47,11 +52,6 @@ const listaLivros = [
   {
     titulo: 'C++',
     preco: 35,
-    editora: 'Galho',
-  },
-  {
-    titulo: 'Scala',
-    preco: 40,
     editora: 'Galho',
   },
 ]

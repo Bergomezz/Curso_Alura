@@ -24,7 +24,7 @@ function trocaDeLugares(array, de, para) {
 
 function divideNoPivot(array) {
   let pivot = array[Math.floor(array.length / 2)]
-  console.log(pivot)
+
   encontraMenores(pivot, array)
 
   let valoresMenores = 0
@@ -44,3 +44,5 @@ function divideNoPivot(array) {
 console.log(divideNoPivot(listaLivros))
 
 //console.log(encontraMenores(listaLivros[2], listaLivros))
+
+module.exports = trocaDeLugares
